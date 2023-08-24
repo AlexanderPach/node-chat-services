@@ -18,14 +18,10 @@ const UserSchema = new Schema(
         password: {
             type: String,
             default: null
-        },
-        image: {
-            type: String,
-            default: null
         }
     }
 )
 
 
-const User = mongoose.model('User', userSchema);
-module.exports = { User }
+
+module.exports = mongoose.model('User', userSchema);
